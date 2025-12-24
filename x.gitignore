@@ -1,0 +1,14 @@
+# ---- DATA ----
+data/
+*.csv
+
+# ---- NOTEBOOKS ----
+.ipynb_checkpoints/
+
+# ---- PYTHON ----
+__pycache__/
+*.pyc
+
+# ---- ENV ----
+.env
+.venv
