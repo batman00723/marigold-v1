@@ -1,11 +1,9 @@
 # Marigold V1 — ML Signal Validation for Crypto Trading
 
-Marigold V1 is the first iteration of a long-term project aimed at building a robust, ML-driven crypto trading system.
+Marigold V1 is the first iteration of a long-term project aimed at building a crypto trading system.
 
 V1 is intentionally **not a trading bot**.  
-Its sole purpose is to validate whether **any predictive signal exists** in short-horizon crypto price data using disciplined machine learning practices.
-
-This project avoids hype, fake profitability, and backtest theater.
+It's solely to validate whether **any predictive signal exists** in short-horizon crypto price data using disciplined machine learning practices.
 
 ---
 
@@ -13,10 +11,10 @@ This project avoids hype, fake profitability, and backtest theater.
 
 > Does any predictive signal exist in BTC price movements that survives proper time-series validation?
 
-V1 prioritizes:
+V1 prioritises:
 
 - Correctness over performance  
-- Stability over optimization  
+- Stability over optimisation  
 - Learning over profits  
 
 ---
@@ -31,7 +29,7 @@ V1 prioritizes:
 
 ### Data Splitting
 
-Strict time-based split (**no shuffling, no leakage**):
+Time-based split:
 
 - Train: 60%  
 - Validation: 20%  
@@ -50,7 +48,7 @@ The target is intentionally noisy and short-horizon to test baseline signal stre
 
 ## 🧪 Feature Engineering
 
-Features were added incrementally and kept only if they generalized across validation and test sets.
+Features were added incrementally and kept only if they generalised across validation and test sets.
 
 ### Final V1 Feature Set (Frozen)
 
@@ -60,7 +58,7 @@ Features were added incrementally and kept only if they generalized across valid
 | mom_10   | Momentum vs 10-period rolling mean |
 | vol_30   | 30-period rolling volatility |
 
-Many other features (e.g. return_5, vol_10, ratios, trend strength) were tested and explicitly rejected due to lack of generalization.
+Many other features (e.g. return_5, vol_10, ratios, trend strength) were tested and explicitly rejected due to a lack of generalisation.
 
 ---
 
@@ -107,7 +105,7 @@ Errors were regime-dependent, not clustered in time.
 
 ---
 
-## 🚦 Regime Filtering (Decision Layer)
+## 🚦 Decision to trade:
 
 A simple regime filter was tested:
 
@@ -116,9 +114,7 @@ A simple regime filter was tested:
 
 - ~9–10% of trades skipped  
 - Slight reduction in error rate  
-- Improved decision stability  
-
-The filter was not optimized for profit.
+- Improved decision stability 
 
 ---
 
@@ -138,7 +134,7 @@ A minimal backtest translated predictions into trades:
 - Total return: ~ −14%  
 - Max drawdown: ~ −15%  
 - No catastrophic blow-ups  
-- Realistic equity behavior  
+- Realistic equity behaviour  
 
 Conclusion:  
 The signal is not tradable in raw form, but the system behaves sanely.
@@ -174,7 +170,7 @@ V1 is successful by design.
 - No transaction costs  
 - No position sizing  
 - No short positions  
-- No execution modeling  
+- No execution modelling  
 
 All intentionally deferred.
 
@@ -191,4 +187,5 @@ All intentionally deferred.
 
 ## 📌 Status
 
-**Marigold V1 — Complete and Frozen**
+
+**Marigold V1 — Complete**
